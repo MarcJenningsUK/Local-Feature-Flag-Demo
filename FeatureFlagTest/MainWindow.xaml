@@ -11,13 +11,22 @@
         <feature:FeatureToVisibilityConverter x:Key="featureVisibility"/>
     </Window.Resources>
     <StackPanel>
+        <Label FontSize="14" Content="These lables are bound to the converter"/>
         <Label Content="Item 1" Visibility="{Binding ., Converter={StaticResource featureVisibility}, ConverterParameter='mjtest1'}" />
         <Label Content="Item 2" Visibility="{Binding ., Converter={StaticResource featureVisibility}, ConverterParameter='mjtest2'}" />
         <Label Content="Item 3" Visibility="{Binding ., Converter={StaticResource featureVisibility}, ConverterParameter='mjtest3'}" />
         <Label Content="Item 4" Visibility="{Binding ., Converter={StaticResource featureVisibility}, ConverterParameter='mjtest4'}" />
+
+        <Label FontSize="14" Content="These buttons call the feature controller directly"/>
         <Button Content="mjtest1" Click="Button_Click_1"/>
         <Button Content="mjtest2" Click="Button_Click_1"/>
         <Button Content="mjtest3" Click="Button_Click_1"/>
         <Button Content="mjtest4" Click="Button_Click_1"/>
+
+        <Label FontSize="14" Content="These lables are bound to the viewmodel"/>
+        <Label Content="Item 1a" Visibility="{Binding ctrl1Vis}" />
+        <Label Content="Item 2b" Visibility="{Binding ctrl2Vis}" />
+        <Label Content="Item 3c" Visibility="{Binding ctrl3Vis}" />
+        <Label Content="Item 4d" Visibility="{Binding ctrl4Vis}" />
     </StackPanel>
 </Window>

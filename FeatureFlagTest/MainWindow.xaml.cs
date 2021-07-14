@@ -1,4 +1,5 @@
 ﻿using FeatureControl;
+using FeatureFlagTest.ViewModel;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -9,9 +10,12 @@ namespace FeatureFlagTest
     /// </summary>
     public partial class MainWindow : Window
     {
+        MainWindowViewModel vm = new MainWindowViewModel();
+
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = vm;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
